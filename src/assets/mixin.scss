@@ -1,0 +1,17 @@
+@mixin text-ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//IE에서는 ...이 보이지 않음
+@mixin multiple-line-ellipsis($line, $line-height){
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: $line * $line-height;
+  line-height: $line-height;
+}
