@@ -1,7 +1,13 @@
 import React from "react";
+import {BrowserRouter} from "react-router-dom";
+import ROUTES, {RenderRoutes} from "../config/route";
+
 import "../assets/style.scss"
+
 export default function App(){
   return (
-    <div>테스트</div>
+    <BrowserRouter>
+      <RenderRoutes routes={ROUTES} />
+    </BrowserRouter>
   )
 }
