@@ -15,3 +15,20 @@
   height: $line * $line-height;
   line-height: $line-height;
 }
+
+//region 들여쓰기 되는 ul
+@mixin custom-ul{
+  display: table-cell;
+  text-align: left;
+}
+@mixin custom-li($content: '•'){
+  list-style: none;
+  display: table-row;
+  &:before{
+    content: $content;
+    display: table-cell;
+    text-align: right;
+    padding-right: .3em;
+  }
+}
+//endregion
